@@ -1,0 +1,215 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.buscador input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.buscador button {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-left: 5px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: #e68900;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos para el carrusel */
+.carrusel {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px 0;
+}
+
+.carrusel-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.carrusel-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilos para el catálogo de animes */
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.anime {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.anime img {
+    width: 100%;
+    height: auto;
+}
+
+.anime h3 {
+    margin: 10px 0;
+}
+
+.anime p {
+    padding: 0 10px 10px;
+}
+
+/* Estilos para la descripción de anime */
+.detalle-pelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.detalle-pelicula img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.detalle-pelicula .descripcion {
+    text-align: center;
+}
+
+.detalle-pelicula .descripcion ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.detalle-pelicula .descripcion ul li {
+    margin-bottom: 10px;
+}
+
+.detalle-pelicula .descripcion .boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.detalle-pelicula .descripcion .boton:hover {
+    background-color: #e68900;
+}
+
+/* Estilos para la lupa del buscador */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.buscador input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.buscador button {
+    padding: 5px 10px;
+    font-size: 16px;
+    margin-left: 5px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.buscador button:hover {
+    background-color: #e68900;
+}
+
+/* Estilos para la lupa del buscador */
+.buscador button:before {
+    content: '\1F50D';
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+/* Estilos para el buscador */
+#buscador-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#buscador-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#buscador-btn:hover {
+    background-color: #e68900;
+}
