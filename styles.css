@@ -28,9 +28,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: relative; /* Cambiado a relative */
+    clear: both; /* Añadido para limpiar el contenido flotante */
 }
 
 #catalogo {
@@ -95,6 +94,7 @@ footer {
     border-radius: 8px;
     width: 80%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px; /* Añadido para separación del contenido superior */
 }
 
 .detalle-pelicula ul {
@@ -130,3 +130,4 @@ footer {
 .search-bar button:hover {
     background-color: #0056b3;
 }
+
