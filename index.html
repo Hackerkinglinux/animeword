@@ -6,6 +6,7 @@
     <title>AnimeWorld</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -103,38 +104,7 @@
     <footer>
         <p>&copy; 2024 AnimeWorld. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        function searchAnime() {
-            const input = document.getElementById('search').value.toLowerCase();
-            const animes = document.querySelectorAll('#catalogo .anime');
-            
-            animes.forEach(anime => {
-                const title = anime.querySelector('h3').textContent.toLowerCase();
-                const description = anime.querySelector('p').textContent.toLowerCase();
-                if (title.includes(input) || description.includes(input)) {
-                    anime.style.display = '';
-                } else {
-                    anime.style.display = 'none';
-                }
-            });
-        }
-
-        $(document).ready(function(){
-            let currentIndex = 0;
-            const items = $('#carousel .carousel-item');
-            const itemCount = items.length;
-
-            function showNextItem() {
-                items.eq(currentIndex).fadeOut(1000);
-                currentIndex = (currentIndex + 1) % itemCount;
-                items.eq(currentIndex).fadeIn(1000);
-            }
-
-            items.hide();
-            items.eq(currentIndex).show();
-            setInterval(showNextItem, 3000);
-        });
-    </script>
 </body>
 </html>
+
 
