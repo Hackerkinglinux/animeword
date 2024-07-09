@@ -86,7 +86,7 @@ nav a {
 }
 
 .carousel-item img {
-    max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+    max-width: 25%; /* Ajusta el ancho máximo de las imágenes */
     height: auto;
     border-radius: 10px;
 }
@@ -124,7 +124,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position:
     width: 100%;
     bottom: 0;
 }
