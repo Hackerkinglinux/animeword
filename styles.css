@@ -88,7 +88,7 @@ nav a {
 }
 
 .carousel-item img {
-    width: 25%;
+    width: 50%;
     height: auto;
     max-height: 300px; /* Ajusta la altura deseada */
     object-fit: cover; /* Asegura que la imagen cubra el contenedor */
