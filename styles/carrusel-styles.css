@@ -55,18 +55,6 @@
     background: white;
 }
 
-.carousel-caption {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1.2em;
-}
-
 /* Estilos para la barra superior */
 .top-bar {
     position: absolute;
@@ -79,6 +67,11 @@
     align-items: center;
     padding: 10px 20px;
     box-sizing: border-box;
+}
+
+.left, .center, .right {
+    display: flex;
+    align-items: center;
 }
 
 .logo h1 {
