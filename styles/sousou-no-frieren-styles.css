@@ -1,0 +1,175 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #282828;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #76c7c0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #76c7c0;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.detalle-pelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.detalle-pelicula img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion {
+    background-color: #282828;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.descripcion h2 {
+    margin-top: 0;
+    color: #76c7c0;
+}
+
+.descripcion p, .descripcion ul {
+    line-height: 1.6;
+}
+
+.descripcion ul {
+    padding-left: 20px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #76c7c0;
+    color: #1e1e1e;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #64b3b0;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #282828;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+
+.comentarios {
+    margin-top: 40px;
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.comentarios h2 {
+    color: #76c7c0;
+}
+
+#comentarios-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#comentarios-form label {
+    font-size: 1.2em;
+}
+
+#comentarios-form input, #comentarios-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    font-size: 1em;
+}
+
+#comentarios-form button {
+    padding: 10px;
+    background-color: #76c7c0;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+#comentarios-form button:hover {
+    background-color: #64b3b0;
+}
+
+.explorar-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.explorar {
+    background-color: #ffcc00;
+    color: #0d0d0d;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.explorar:hover {
+    background-color: #e6b800;
+}
+
+.explorar-content {
+    display: none;
+    position: absolute;
+    background-color: #0d0d0d;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.explorar-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.explorar-content a:hover {
+    background-color: #575757;
+}
+
+.explorar-menu:hover .explorar-content {
+    display: block;
+}

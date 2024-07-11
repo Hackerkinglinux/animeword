@@ -1,0 +1,130 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #ffcc00;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.detalle-pelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.detalle-pelicula img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.descripcion {
+    background-color: #1a1a1a;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.descripcion h2 {
+    margin-top: 0;
+    color: #ffcc00;
+}
+
+.descripcion p, .descripcion ul {
+    line-height: 1.6;
+}
+
+.descripcion ul {
+    padding-left: 20px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #0d0d0d;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #e6b800;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin-top: 20px;
+}
+
+.explorar-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.explorar {
+    background-color: #ffcc00;
+    color: #0d0d0d;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.explorar:hover {
+    background-color: #e6b800;
+}
+
+.explorar-content {
+    display: none;
+    position: absolute;
+    background-color: #0d0d0d;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.explorar-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.explorar-content a:hover {
+    background-color: #575757;
+}
+
+.explorar-menu:hover .explorar-content {
+    display: block;
+}
