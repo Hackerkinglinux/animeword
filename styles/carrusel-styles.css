@@ -7,7 +7,7 @@
 
 .carousel-slide {
     display: flex;
-    transition: transform 60s ease-in-out;
+    transition: transform 30s ease-in-out; /* Cambiado a 30 segundos */
 }
 
 .carousel-item {
@@ -53,4 +53,3 @@
 .carousel-indicators button.active {
     background: white;
 }
-
