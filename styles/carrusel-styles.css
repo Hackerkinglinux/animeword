@@ -1,3 +1,4 @@
+/* Estilos del carrusel */
 .carousel-container {
     position: relative;
     max-width: 100%;
@@ -52,4 +53,72 @@
 
 .carousel-indicators button.active {
     background: white;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Estilos para la barra superior */
+.top-bar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+}
+
+.navigation a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.dropdown .dropbtn {
+    background: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo transparente */
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
