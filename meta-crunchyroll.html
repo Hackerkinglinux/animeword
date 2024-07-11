@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchyroll</title>
+    <link rel="stylesheet" href="styles/crunchyroll-styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AnimeWorld</h1>
+    </header>
+    <nav>
+        <ul>
+            <div class="logo">
+                <img src="images/crunchyroll-logo.jpg" alt="Crunchyroll Logo">
+            </div>
+            <li class="dropdown">
+                <a href="#" onclick="toggleGenres()">Explorar</a>
+                <div class="dropdown-content" id="genre-dropdown">
+                    <a href="#">Acción</a>
+                    <a href="#">Aventura</a>
+                    <a href="#">Comedia</a>
+                    <a href="#">Drama</a>
+                    <a href="#">Fantasía</a>
+                    <a href="#">Ciencia Ficción</a>
+                    <a href="#">Romance</a>
+                    <a href="#">Terror</a>
+                    <!-- Añade más géneros según sea necesario -->
+                </div>
+            </li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+    <form class="search-form" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Buscar anime...">
+        <button type="button" onclick="searchAnime()">🔍</button>
+    </form>
+    <main>
+        <section class="featured">
+            <h2>Featured Anime</h2>
+            <div class="anime-list" id="animeList">
+                <div class="anime-item">
+                    <img src="images/one-piece.jpg" alt="One Piece">
+                    <div class="anime-info">
+                        <h3>One Piece</h3>
+                        <p>Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <img src="images/el-nino-y-la-garza.jpg" alt="The Boy and the Heron">
+                    <div class="anime-info">
+                        <h3>The Boy and the Heron [Movie]</h3>
+                        <p>Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <img src="img/naruto.jpg" alt="Naruto">
+                    <div class="anime-info">
+                        <h3>Naruto</h3>
+                        <p>220 Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <img src="img/mushoku-tensei.jpg" alt="Mushoku Tensei">
+                    <div class="anime-info">
+                        <h3>Mushoku Tensei</h3>
+                        <p>23 Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <img src="img/attack-on-titan.jpg" alt="Attack on Titan">
+                    <div class="anime-info">
+                        <h3>Attack on Titan</h3>
+                        <p>25 Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <img src="img/boku-no-hero-7.jpg" alt="My Hero Academia">
+                    <div class="anime-info">
+                        <h3>My Hero Academia</h3>
+                        <p>13 Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <div class="anime-item">
+                    <img src="img/solo-leveling.jpg" alt="Solo Leveling">
+                    <div class="anime-info">
+                        <h3>Solo Leveling</h3>
+                        <p>13 Sub | Dob</p>
+                        <button>Watch Now</button>
+                    </div>
+                </div>
+                <!-- Add more anime items as needed -->
+            </div>
+        </section>
+
+        <section class="latest">
+            <h2>Latest Releases</h2>
+            <div class="release-list">
+                <!-- Populate with latest releases -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/crunchyroll-logo.jpg" alt="Crunchyroll Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="buscador-scripts.js"></script>
+</body>
+</html>
+
