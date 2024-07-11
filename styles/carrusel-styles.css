@@ -1,0 +1,56 @@
+.carousel-container { 
+    position: relative;
+    max-width: 100%;
+    height: 1080px;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 500%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 1080px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-indicators button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators button.active {
+    background: white;
+}
