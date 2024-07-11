@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #0d0d0d;
+    background: url('../images/solo-leveling-background.png') no-repeat center center fixed;
+    background-size: cover;
     color: #f0f0f0;
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ header {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.8);
 }
 
 header h1 {
@@ -55,7 +56,7 @@ video {
 }
 
 .descripcion {
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.8);
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
@@ -91,7 +92,7 @@ video {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: rgba(26, 26, 26, 0.8);
     color: #f0f0f0;
     margin-top: 20px;
 }
