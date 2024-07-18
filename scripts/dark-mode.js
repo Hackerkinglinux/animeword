@@ -1,21 +1,12 @@
 // scripts/dark-mode.js
-$(document).ready(function() {
-    const toggleButton = $('#toggleDarkMode');
-    const body = $('body');
-
-    // Comprueba si el usuario ya ha seleccionado el modo oscuro anteriormente
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        body.addClass('dark-mode');
-    }
-
-    toggleButton.on('click', function() {
-        body.toggleClass('dark-mode');
-
-        // Guardar la preferencia del usuario en el almacenamiento local
-        if (body.hasClass('dark-mode')) {
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+    toggleDarkModeButton.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
+        document.querySelector('.advanced-search').classList.toggle('dark-mode');
+        document.querySelector('.anime-row').classList.toggle('dark-mode');
+        document.querySelector('.carousel-container').classList.toggle('dark-mode');
     });
 });
