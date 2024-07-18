@@ -1,0 +1,48 @@
+/* Estilos para el buscador avanzado */
+.advanced-search {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.advanced-search h2 {
+    margin-bottom: 20px;
+}
+
+.advanced-search form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.advanced-search input,
+.advanced-search select,
+.advanced-search button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.advanced-search button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.advanced-search button:hover {
+    background-color: #0056b3;
+}
+
+#searchResults {
+    margin-top: 20px;
+}
+/* Estilos para los resultados de búsqueda */
+.anime-result {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
