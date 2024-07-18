@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="styles/lupa-buscador-styles.css">
     <link rel="stylesheet" href="styles/anime-row-styles.css">
     <link rel="stylesheet" href="styles/header-styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
     <script src="scripts.js" defer></script>
 </head>
 <body>
@@ -53,14 +53,14 @@
             <div class="right">
                 <nav>
                     <a href="index.html">Anime Sama</a>
-                    <button id="searchIcon"><img src="images/lupa.jpg" alt="Buscar"></button> <!-- Icono de lupa -->
+                    <button id="searchIcon"><img src="images/lupa.jpg" alt="Buscar" style="width: 50px; cursor: pointer;"></button> <!-- Icono de lupa -->
                 </nav>
             </div>
         </div>
     </header>
     
     <!-- Buscador Avanzado -->
-    <div class="advanced-search">
+    <div class="advanced-search" id="searchContainer">
         <h2>Buscar Anime</h2>
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="Nombre del Anime">
@@ -154,18 +154,8 @@
     <footer>
         <p>&copy; 2024 AnimeWorld. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        document.getElementById('searchIcon').addEventListener('click', function() {
-            var searchBox = document.querySelector('.advanced-search');
-            if (searchBox.style.display === 'none' || searchBox.style.display === '') {
-                searchBox.style.display = 'block';
-            } else {
-                searchBox.style.display = 'none';
-            }
-        });
-    </script>
-    <script src="scripts/carousel.js"></script>
-    <script src="scripts/dropdown.js"></script>
-    <script src="scripts/search.js"></script> <!-- Nuevo archivo de script -->
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/search.js" defer></script> <!-- Nuevo archivo de script -->
 </body>
 </html>
