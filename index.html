@@ -6,6 +6,7 @@
     <title>Anime Sama</title>
     <link rel="stylesheet" href="styles/carrusel-styles.css">
     <link rel="stylesheet" href="styles/buscador-styles.css">
+    <link rel="stylesheet" href="styles/lupa-buscador-styles.css">
     <link rel="stylesheet" href="styles/anime-row-styles.css">
     <link rel="stylesheet" href="styles/header-styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -13,7 +14,7 @@
 </head>
 <body>
     <header>
-        <div class="top-bar">
+        <div class="top-bar"> 
             <div class="left">
                 <div class="dropdown">
                     <button class="dropbtn">Explorar</button>
@@ -55,6 +56,30 @@
             </div>
         </div>
     </header>
+    
+    <!-- Buscador Avanzado -->
+    <div class="advanced-search">
+        <h2>Buscar Anime</h2>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Buscar por nombre...">
+            <select id="genreSelect">
+                <option value="">Todos los géneros</option>
+                <option value="accion">Acción</option>
+                <option value="aventura">Aventura</option>
+                <option value="comedia">Comedia</option>
+                <option value="drama">Drama</option>
+                <!-- Agrega más géneros según sea necesario -->
+            </select>
+            <select id="statusSelect">
+                <option value="">Todos los estados</option>
+                <option value="emision">En emisión</option>
+                <option value="finalizado">Finalizado</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        <div id="searchResults"></div>
+    </div>
+    
     <main>
         <!-- Carrusel -->
         <div class="carousel-container">
@@ -131,6 +156,6 @@
     </footer>
     <script src="scripts/carousel.js"></script>
     <script src="scripts/dropdown.js"></script>
+    <script src="scripts/search.js"></script> <!-- Nuevo archivo de script -->
 </body>
 </html>
-
