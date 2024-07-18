@@ -1,62 +1,56 @@
-$(document).ready(function () {
-    // Mostrar el buscador al hacer clic en el botón
-    $('#showSearchButton').on('click', function () {
-        $('#searchContainer').toggleClass('hidden');
-    });
 
+// scripts/search.js
+$(document).ready(function () {
     const animes = [
-        { nombre: 'One Piece', genero: 'accion', estado: 'emision' },
-        { nombre: 'Kaiju No 8', genero: 'accion', estado: 'emision' },
-        { nombre: 'Sousou No Frieren', genero: 'aventura', estado: 'emision' },
-        { nombre: 'Solo Leveling', genero: 'accion', estado: 'emision' },
-        { nombre: 'The Boys and The Heron', genero: 'fantasia', estado: 'finalizado' },
-        { nombre: 'Crunchyroll', genero: 'aventura', estado: 'emision' }
+        { title: "One Piece", genre: "accion", status: "emision", url: "one-piece.html" },
+        { title: "Kaiju No 8", genre: "accion", status: "emision", url: "kaiju-no-8.html" },
+        { title: "Sousou No Frieren", genre: "fantasia", status: "emision", url: "sousou-no-frieren.html" },
+        { title: "Solo Leveling", genre: "accion", status: "finalizado", url: "solo-leveling.html" },
+        { title: "The Boys and The Heron", genre: "fantasia", status: "finalizado", url: "el-nino-y-la-garza.html" },
     ];
 
-    const options = {
-        keys: ['nombre']
-    };
-    const fuse = new Fuse(animes, options);
+    const fuse = new Fuse(animes, {
+        keys: ['title', 'genre', 'status'],
+        threshold: 0.3
+    });
 
     $('#searchForm').on('submit', function (e) {
         e.preventDefault();
+        const searchText = $('#searchInput').val();
+        const genre = $('#genreSelect').val();
+        const status = $('#statusSelect').val();
 
-        const searchInput = $('#searchInput').val().toLowerCase();
-        const genreSelect = $('#genreSelect').val();
-        const statusSelect = $('#statusSelect').val();
+        let results = fuse.search(searchText);
 
-        const result = fuse.search(searchInput);
-        let filteredAnimes = result.map(({ item }) => item);
-
-        if (genreSelect) {
-            filteredAnimes = filteredAnimes.filter(anime => anime.genero === genreSelect);
+        if (genre) {
+            results = results.filter(result => result.item.genre === genre);
         }
 
-        if (statusSelect) {
-            filteredAnimes = filteredAnimes.filter(anime => anime.estado === statusSelect);
+        if (status) {
+            results = results.filter(result => result.item.status === status);
         }
 
-        displayResults(filteredAnimes);
+        displayResults(results);
     });
 
-    function displayResults(animes) {
+    function displayResults(results) {
         const resultsContainer = $('#searchResults');
         resultsContainer.empty();
 
-        if (animes.length > 0) {
-            animes.forEach(anime => {
-                const animeElement = `<div class="anime-result" data-anime="${anime.nombre}">
-                    <h3>${anime.nombre}</h3>
-                    <p>Género: ${anime.genero}</p>
-                    <p>Estado: ${anime.estado}</p>
-                </div>`;
-                resultsContainer.append(animeElement);
-            });
-
-            // Hacer que cada resultado redirija a una página específica
-            $('.anime-result').on('click', function () {
-                const animeName = $(this).data('anime');
-                window.location.href = `/${animeName}.html`; // Ajusta esto según tu estructura de URLs
+        if (results.length > 0) {
+            results.forEach(result => {
+                const item = result.item;
+                const resultItem = $(`
+                    <div class="search-result-item" data-url="${item.url}">
+                        <h3>${item.title}</h3>
+                        <p>Género: ${item.genre}</p>
+                        <p>Estado: ${item.status}</p>
+                    </div>
+                `);
+                resultItem.on('click', function () {
+                    window.location.href = $(this).data('url');
+                });
+                resultsContainer.append(resultItem);
             });
         } else {
             resultsContainer.append('<p>No se encontraron resultados</p>');
