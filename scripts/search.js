@@ -1,4 +1,3 @@
-// scripts/search.js
 $(document).ready(function () {
     const animes = [
         // Acción
@@ -102,9 +101,19 @@ $(document).ready(function () {
         }
     }
 
-    // Mostrar y ocultar el buscador avanzado
+    // Mostrar y ocultar el buscador avanzado y limpiar resultados
     $('#searchIcon').on('click', function() {
         var searchBox = $('.advanced-search');
         searchBox.toggle();
+        if (!searchBox.is(':visible')) {
+            clearSearchResults();
+        }
     });
+
+    function clearSearchResults() {
+        $('#searchResults').empty();
+        $('#searchInput').val('');
+        $('#genreSelect').val('');
+        $('#statusSelect').val('');
+    }
 });
