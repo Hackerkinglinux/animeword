@@ -1,5 +1,9 @@
 $(document).ready(function () {
-    // Lista de animes simulada
+    // Mostrar el buscador al hacer clic en el botón
+    $('#showSearchButton').on('click', function () {
+        $('#searchContainer').toggleClass('hidden');
+    });
+
     const animes = [
         { nombre: 'One Piece', genero: 'accion', estado: 'emision' },
         { nombre: 'Kaiju No 8', genero: 'accion', estado: 'emision' },
@@ -9,10 +13,10 @@ $(document).ready(function () {
         { nombre: 'Crunchyroll', genero: 'aventura', estado: 'emision' }
     ];
 
-    const fuse = new Fuse(animes, {
-        keys: ['nombre'],
-        threshold: 0.3 // Ajusta este valor según el nivel de coincidencia que desees
-    });
+    const options = {
+        keys: ['nombre']
+    };
+    const fuse = new Fuse(animes, options);
 
     $('#searchForm').on('submit', function (e) {
         e.preventDefault();
@@ -21,13 +25,16 @@ $(document).ready(function () {
         const genreSelect = $('#genreSelect').val();
         const statusSelect = $('#statusSelect').val();
 
-        const searchResults = fuse.search(searchInput).map(result => result.item);
+        const result = fuse.search(searchInput);
+        let filteredAnimes = result.map(({ item }) => item);
 
-        const filteredAnimes = searchResults.filter(anime => {
-            const matchesGenre = genreSelect === "" || anime.genero === genreSelect;
-            const matchesStatus = statusSelect === "" || anime.estado === statusSelect;
-            return matchesGenre && matchesStatus;
-        });
+        if (genreSelect) {
+            filteredAnimes = filteredAnimes.filter(anime => anime.genero === genreSelect);
+        }
+
+        if (statusSelect) {
+            filteredAnimes = filteredAnimes.filter(anime => anime.estado === statusSelect);
+        }
 
         displayResults(filteredAnimes);
     });
@@ -38,16 +45,21 @@ $(document).ready(function () {
 
         if (animes.length > 0) {
             animes.forEach(anime => {
-                const animeElement = `<div class="anime-result">
+                const animeElement = `<div class="anime-result" data-anime="${anime.nombre}">
                     <h3>${anime.nombre}</h3>
                     <p>Género: ${anime.genero}</p>
                     <p>Estado: ${anime.estado}</p>
                 </div>`;
                 resultsContainer.append(animeElement);
             });
-            $('.anime-result').hide().fadeIn(500);
+
+            // Hacer que cada resultado redirija a una página específica
+            $('.anime-result').on('click', function () {
+                const animeName = $(this).data('anime');
+                window.location.href = `/${animeName}.html`; // Ajusta esto según tu estructura de URLs
+            });
         } else {
-            resultsContainer.append('<p>No se encontraron resultados</p>').hide().fadeIn(500);
+            resultsContainer.append('<p>No se encontraron resultados</p>');
         }
     }
 });
