@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/lupa-buscador-styles.css">
     <link rel="stylesheet" href="styles/anime-row-styles.css">
     <link rel="stylesheet" href="styles/header-styles.css">
+    <link rel="stylesheet" href="styles/dark-mode-styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
     <script src="scripts.js" defer></script>
@@ -56,6 +57,10 @@
                     <button id="searchIcon"><img src="images/lupa.jpg" alt="Buscar" style="width: 50px; cursor: pointer;"></button> <!-- Icono de lupa -->
                 </nav>
             </div>
+            <!-- Añadir esto dentro del <header> o en otra parte visible de tu página -->
+<div class="dark-mode-toggle">
+    <button id="toggleDarkMode">Dark Mode</button>
+</div>
         </div>
     </header>
     
@@ -157,5 +162,6 @@
     <script src="scripts/carousel.js" defer></script>
     <script src="scripts/dropdown.js" defer></script>
     <script src="scripts/search.js" defer></script> <!-- Nuevo archivo de script -->
+    <script src="scripts/dark-mode.js"></script> <!-- Nuevo archivo de script -->
 </body>
 </html>
