@@ -1,81 +1,77 @@
-.hidden {
-    display: none;
-}
 
-#showSearchButton {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#showSearchButton:hover {
-    background-color: #0056b3;
-}
-
+/* styles/buscador-styles.css */
 .advanced-search {
-    margin: 20px auto;
+    background-color: #1b1b1b;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 80%;
     max-width: 600px;
-    color: white;
+    text-align: center;
 }
 
 .advanced-search h2 {
+    color: #00d8ff;
+    font-size: 24px;
     margin-bottom: 20px;
-}
-
-.advanced-search form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    text-shadow: 0 0 5px #00d8ff;
 }
 
 .advanced-search input,
 .advanced-search select,
 .advanced-search button {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
     border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
-.advanced-search input,
+.advanced-search input {
+    background-color: #2c2c2c;
+    color: #fff;
+}
+
 .advanced-search select {
     background-color: #2c2c2c;
-    color: white;
+    color: #00d8ff;
 }
 
 .advanced-search button {
-    background-color: #007bff;
-    color: white;
+    background-color: #00d8ff;
+    color: #1b1b1b;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .advanced-search button:hover {
-    background-color: #0056b3;
+    background-color: #009ec3;
 }
 
+/* Resultados de búsqueda */
 #searchResults {
-    margin-top: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background-color: #1b1b1b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos para los resultados de búsqueda */
-.anime-result {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
+.search-result-item {
     background-color: #2c2c2c;
-    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #00d8ff;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.anime-result:hover {
+.search-result-item:hover {
     background-color: #3d3d3d;
 }
