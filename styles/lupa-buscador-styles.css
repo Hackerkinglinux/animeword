@@ -2,47 +2,83 @@
 .advanced-search {
     margin: 20px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    border: 1px solid #444;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1f1f1f, #3e3e3e);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .advanced-search h2 {
     margin-bottom: 20px;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
 }
 
 .advanced-search form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .advanced-search input,
 .advanced-search select,
 .advanced-search button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.advanced-search input:focus,
+.advanced-search select:focus,
+.advanced-search button:focus {
+    outline: none;
+    background-color: #353535;
+    box-shadow: 0 0 10px #00eaff;
 }
 
 .advanced-search button {
-    background-color: #007bff;
-    color: white;
+    background-color: #00eaff;
+    color: #1f1f1f;
     cursor: pointer;
 }
 
 .advanced-search button:hover {
-    background-color: #0056b3;
+    background-color: #009ac7;
+}
+
+.lupa-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
 }
 
 #searchResults {
     margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #2b2b2b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 /* Estilos para los resultados de búsqueda */
 .anime-result {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 10px;
     margin-bottom: 10px;
-    background-color: #fff;
+    background-color: #1f1f1f;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.anime-result:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
