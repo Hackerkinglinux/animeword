@@ -1,0 +1,38 @@
+/* styles/dark-mode-styles.css */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .advanced-search,
+.dark-mode #searchResults,
+.dark-mode .carousel-container,
+.dark-mode .anime-row {
+    background-color: #1b1b1b;
+    color: #e0e0e0;
+}
+
+.dark-mode .advanced-search input,
+.dark-mode .advanced-search select,
+.dark-mode .advanced-search button {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.dark-mode .advanced-search button {
+    background-color: #00d8ff;
+    color: #1b1b1b;
+}
+
+.dark-mode .advanced-search button:hover {
+    background-color: #009ec3;
+}
+
+.dark-mode .search-result-item {
+    background-color: #2c2c2c;
+    color: #00d8ff;
+}
+
+.dark-mode .search-result-item:hover {
+    background-color: #3d3d3d;
+}
