@@ -1,4 +1,3 @@
-
 // scripts/search.js
 $(document).ready(function () {
     const animes = [
@@ -56,4 +55,10 @@ $(document).ready(function () {
             resultsContainer.append('<p>No se encontraron resultados</p>');
         }
     }
+
+    // Mostrar y ocultar el buscador avanzado
+    $('#searchIcon').on('click', function() {
+        var searchBox = $('.advanced-search');
+        searchBox.toggle();
+    });
 });
