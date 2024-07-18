@@ -2,8 +2,10 @@
 body.dark-mode {
     background-color: #121212;
     color: #e0e0e0;
-    background-image: url('images/anime-paisaje-futuristico.jpg'); /* Imagen de fondo futurista estilo anime pirata */
+    background-image: url('../images/anime-paisaje-futuristico.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -12,7 +14,7 @@ footer.dark-mode,
 .advanced-search.dark-mode,
 .anime-row.dark-mode,
 .carousel-container.dark-mode {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente para la legibilidad del texto */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .dark-mode-toggle button {
