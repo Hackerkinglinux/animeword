@@ -1,46 +1,53 @@
-$(document).ready(function() {
-    $('#searchForm').on('submit', function(event) {
-        event.preventDefault();
-        
-        // Obtener los valores de los campos del formulario
-        const searchQuery = $('#searchInput').val().toLowerCase();
-        const genre = $('#genreSelect').val();
-        const status = $('#statusSelect').val();
-        
-        // Limpiar resultados de búsqueda anteriores
-        $('#searchResults').empty();
-        
-        // Simulación de datos de anime (esto debería reemplazarse con una llamada a una API o base de datos)
-        const animes = [
-            { nombre: 'One Piece', genero: 'accion', estado: 'emision' },
-            { nombre: 'Kaiju No 8', genero: 'accion', estado: 'finalizado' },
-            { nombre: 'Solo Leveling', genero: 'aventura', estado: 'emision' },
-            { nombre: 'Sousou No Frieren', genero: 'drama', estado: 'emision' },
-            { nombre: 'El Niño y La Garza', genero: 'fantasia', estado: 'finalizado' },
-            // Agrega más datos de anime según sea necesario
-        ];
-        
-        // Filtrar animes según los criterios de búsqueda
-        const filteredAnimes = animes.filter(anime => {
-            const matchName = anime.nombre.toLowerCase().includes(searchQuery);
-            const matchGenre = genre ? anime.genero === genre : true;
-            const matchStatus = status ? anime.estado === status : true;
-            return matchName && matchGenre && matchStatus;
-        });
-        
-        // Mostrar los resultados de la búsqueda
-        if (filteredAnimes.length > 0) {
-            filteredAnimes.forEach(anime => {
-                $('#searchResults').append(`
-                    <div class="anime-result">
-                        <h3>${anime.nombre}</h3>
-                        <p>Género: ${anime.genero}</p>
-                        <p>Estado: ${anime.estado}</p>
-                    </div>
-                `);
-            });
-        } else {
-            $('#searchResults').append('<p>No se encontraron resultados</p>');
-        }
+$(document).ready(function () {
+    // Lista de animes simulada
+    const animes = [
+        { nombre: 'One Piece', genero: 'accion', estado: 'emision' },
+        { nombre: 'Kaiju No 8', genero: 'accion', estado: 'emision' },
+        { nombre: 'Sousou No Frieren', genero: 'aventura', estado: 'emision' },
+        { nombre: 'Solo Leveling', genero: 'accion', estado: 'emision' },
+        { nombre: 'The Boys and The Heron', genero: 'fantasia', estado: 'finalizado' },
+        { nombre: 'Crunchyroll', genero: 'aventura', estado: 'emision' }
+    ];
+
+    const fuse = new Fuse(animes, {
+        keys: ['nombre'],
+        threshold: 0.3 // Ajusta este valor según el nivel de coincidencia que desees
     });
+
+    $('#searchForm').on('submit', function (e) {
+        e.preventDefault();
+
+        const searchInput = $('#searchInput').val().toLowerCase();
+        const genreSelect = $('#genreSelect').val();
+        const statusSelect = $('#statusSelect').val();
+
+        const searchResults = fuse.search(searchInput).map(result => result.item);
+
+        const filteredAnimes = searchResults.filter(anime => {
+            const matchesGenre = genreSelect === "" || anime.genero === genreSelect;
+            const matchesStatus = statusSelect === "" || anime.estado === statusSelect;
+            return matchesGenre && matchesStatus;
+        });
+
+        displayResults(filteredAnimes);
+    });
+
+    function displayResults(animes) {
+        const resultsContainer = $('#searchResults');
+        resultsContainer.empty();
+
+        if (animes.length > 0) {
+            animes.forEach(anime => {
+                const animeElement = `<div class="anime-result">
+                    <h3>${anime.nombre}</h3>
+                    <p>Género: ${anime.genero}</p>
+                    <p>Estado: ${anime.estado}</p>
+                </div>`;
+                resultsContainer.append(animeElement);
+            });
+            $('.anime-result').hide().fadeIn(500);
+        } else {
+            resultsContainer.append('<p>No se encontraron resultados</p>').hide().fadeIn(500);
+        }
+    }
 });
