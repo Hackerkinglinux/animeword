@@ -75,3 +75,16 @@
 .search-result-item:hover {
     background-color: #3d3d3d;
 }
+
+/* styles/lupa-icon-styles.css */
+.search-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.search-icon {
+    width: 32px;  /* Ajusta el tamaño del icono aquí */
+    height: 32px; /* Ajusta el tamaño del icono aquí */
+}
