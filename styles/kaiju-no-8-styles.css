@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .logo img {
+    width: 50px;
+}
+
+.top-bar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.hero-banner {
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-banner h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.poster img {
+    width: 300px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.descripcion {
+    flex: 1;
+}
+
+.descripcion h2 {
+    margin-top: 0;
+}
+
+.descripcion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.descripcion ul li {
+    margin-bottom: 10px;
+}
+
+.descripcion ul li strong {
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.ver {
+    background-color: #ff6347;
+}
+
+.descargar {
+    background-color: #32cd32;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
