@@ -4,36 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaiju no 8</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/kaiju-no-8-styles.css">
 </head>
 <body>
     <header>
-        <h1>Kaiju no 8</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-        </nav>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Anime Sama Logo">
+            </div>
+            <h1>Kaiju no 8</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="explorar.html">Explorar</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
     </header>
     <main class="detalle-pelicula">
-        <img src="images/kaiju-no-8.jpg" alt="Kaiju no 8">
-        <div class="descripcion">
+        <div class="hero-banner" style="background-image: url('images/kaiju-no-8-banner.jpg');">
             <h2>Kaiju no 8</h2>
-            <ul>
-                <li>Tipo: Serie</li>
-                <li>Resolución: 1920×1080</li>
-                <li>Calidad: WEB-DEL Excelente</li>
-                <li>Duración: 23 minutos por episodio</li>
-                <li>Audios: Español Latino, Castellano,Japonés</li>
-                <li>Subtítulos: Español, Castellano, English</li>
-                <li>Fansub: Oficiales</li>
-                <li>Formato: MKV</li>
-                <li>Peso: 1.3GB por episodio</li>
-            </ul>
-            <a href="https://www.crunchyroll.com/kaiju-no-8" class="boton">Ver en Crunchyroll</a>
-            <a href="https://drive.google.com/kaiju-no-8" class="boton">Descargar</a>
+        </div>
+        <div class="content">
+            <div class="poster">
+                <img src="images/kaiju-no-8.jpg" alt="Kaiju no 8">
+            </div>
+            <div class="descripcion">
+                <h2>Información del Anime</h2>
+                <ul>
+                    <li><strong>Tipo:</strong> Serie</li>
+                    <li><strong>Resolución:</strong> 1920×1080</li>
+                    <li><strong>Calidad:</strong> WEB-DL Excelente</li>
+                    <li><strong>Duración:</strong> 23 minutos por episodio</li>
+                    <li><strong>Audios:</strong> Español Latino, Castellano, Japonés, Ingles</li>
+                    <li><strong>Subtítulos:</strong> Español, Castellano, Inglés</li>
+                    <li><strong>Fansub:</strong> Oficiales</li>
+                    <li><strong>Formato:</strong> MKV</li>
+                    <li><strong>Peso:</strong> 1.3GB por episodio</li>
+                </ul>
+                <div class="buttons">
+                    <a href="https://www.crunchyroll.com/kaiju-no-8" class="boton ver">Ver en Crunchyroll</a>
+                    <a href="https://drive.google.com/kaiju-no-8" class="boton descargar">Descargar</a>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 AnimeWorld. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <p>&copy; 2024 AnimeWorld. Todos los derechos reservados.</p>
+            <nav>
+                <a href="privacidad.html">Política de Privacidad</a>
+                <a href="terminos.html">Términos de Servicio</a>
+            </nav>
+        </div>
     </footer>
 </body>
 </html>
