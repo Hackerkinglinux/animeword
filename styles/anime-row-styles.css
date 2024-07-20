@@ -11,7 +11,7 @@
 
 .anime-container {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto; /* Cambié scroll por auto para permitir el desplazamiento automático */
     gap: 10px;
     padding-bottom: 10px;
 }
@@ -33,7 +33,7 @@
 
 .anime-item h3 {
     font-size: 18px;
-    margin: 10px;
+    margin: 10px 0; /* Ajuste de margen para asegurar un espaciado uniforme */
     text-align: center;
     color: #333;
 }
@@ -42,11 +42,13 @@
     transform: scale(1.05);
 }
 
+/* Ocultar la barra de desplazamiento en navegadores webkit */
 .anime-container::-webkit-scrollbar {
-    display: none; /* Ocultar la barra de desplazamiento en navegadores webkit */
+    display: none; 
 }
 
+/* Ocultar la barra de desplazamiento en IE y Edge */
 .anime-container {
-    -ms-overflow-style: none;  /* Ocultar la barra de desplazamiento en IE y Edge */
+    -ms-overflow-style: none;  
     scrollbar-width: none;  /* Ocultar la barra de desplazamiento en Firefox */
 }
