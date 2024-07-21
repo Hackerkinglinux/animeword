@@ -5,200 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Sama</title>
     <link rel="stylesheet" href="styles/carrusel-styles.css">
-    <link rel="stylesheet" href="styles/Boton-menu-styles.css">
-    <link rel="stylesheet" href="styles/lupa-buscador-styles.css">
-    <link rel="stylesheet" href="styles/anime-row-styles.css">
-    <link rel="stylesheet" href="styles/header-styles.css">
-    <link rel="stylesheet" href="styles/dark-mode-styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js" defer></script>
-    <script src="scripts/carousel.js" defer></script>
-    <script src="scripts/dropdown.js" defer></script>
-    <script src="scripts/search.js" defer></script>
-    <script src="scripts/dark-mode.js" defer></script>
 </head>
 <body>
     <header>
         <div class="top-bar"> 
             <div class="left">
-                <div class="dropdown">
-                    <button class="dropbtn">Explorar</button>
-                    <div class="dropdown-content">
-                        <div class="dropdown-column">
-                            <a href="mix-genero.html">Acción</a>
-                            <a href="aventura.html">Aventura</a>
-                            <a href="comedia.html">Comedia</a>
-                        </div>
-                        <div class="dropdown-column">
-                            <a href="drama.html">Drama</a>
-                            <a href="fantasia.html">Fantasía</a>
-                            <a href="musical.html">Musical</a>
-                        </div>
-                        <div class="dropdown-column">
-                            <a href="romance.html">Romance</a>
-                            <a href="ciencia-ficcion.html">Ciencia Ficción</a>
-                            <a href="seinen.html">Seinen</a>
-                        </div>
-                        <div class="dropdown-column">
-                            <a href="shojo.html">Shojo</a>
-                            <a href="shonen.html">Shonen</a>
-                            <a href="thriller.html">Thriller</a>
-                        </div>
-                        <div class="dropdown-column">
-                            <a href="peliculas.html">Películas</a>
-                            <a href="ovas.html">OVAs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="center">
-                <h1>Anime Sama</h1>
-            </div>
-            <div class="right">
+                <a href="#" class="logo">Anime Sama</a>
                 <nav>
-                    <a href="index.html">Anime Sama</a>
-                    <button id="searchIcon"><img src="images/lupa.jpg" alt="Buscar" style="width: 50px; cursor: pointer;"></button>
+                    <a href="#">Explorar</a>
+                    <a href="#">Juegos</a>
+                    <a href="#">Tienda</a>
+                    <a href="#">Noticias</a>
                 </nav>
             </div>
-            <div class="dark-mode-toggle">
-                <button id="toggleDarkMode">Dark Mode</button>
+            <div class="right">
+                <button id="searchIcon"><img src="images/lupa.jpg" alt="Buscar" style="width: 20px; cursor: pointer;"></button>
+                <a href="#"><img src="images/profile.jpg" alt="Perfil" style="width: 30px; border-radius: 50%;"></a>
             </div>
         </div>
     </header>
-    
-    <div class="advanced-search" id="searchContainer">
-        <h2>Buscar Anime</h2>
-        <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Nombre del Anime">
-            <select id="genreSelect">
-                <option value="">Todos los géneros</option>
-                <option value="accion">Acción</option>
-                <option value="aventura">Aventura</option>
-                <option value="fantasia">Fantasía</option>
-            </select>
-            <select id="statusSelect">
-                <option value="">Todos los estados</option>
-                <option value="emision">En emisión</option>
-                <option value="finalizado">Finalizado</option>
-            </select>
-            <button type="submit">Buscar</button>
-        </form>
-    </div>
-    <div id="searchResults"></div>
-    
-    <main>
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <div class="carousel-item" style="background-image: url('images/fondo-one-piece.jpg');"></div>
-                <div class="carousel-item" style="background-image: url('images/fondo-solo-levelig.jpg');"></div>
-                <div class="carousel-item" style="background-image: url('images/fondo-jujutsu-kaisen-1.jpg');"></div>
-                <div class="carousel-item" style="background-image: url('images/fondo-one-piece.jpg');"></div>
-                <div class="carousel-item" style="background-image: url('images/fondo-solo-levelig.jpg');"></div>
-            </div>
-            <div class="carousel-controls">
-                <button id="prevBtn">&lt;</button>
-                <button id="nextBtn">&gt;</button>
-            </div>
-            <div class="carousel-indicators">
-                <button class="active"></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
+
+    <section class="carousel">
+        <div class="carousel-item">
+            <img src="images/fondo-one-piece.jpg" alt="NieR: Automata">
+            <div class="carousel-content">
+                <h2>NieR: Automata</h2>
+                <p>14+ | Sub | Dob</p>
+                <p>2B es una unidad que participa en una misión que tristemente sale mal y eliminan a todo su equipo. Ella intenta seguir con su misión, donde conoce a 9S.</p>
+                <a href="#" class="button">COMENZAR A VER E1</a>
             </div>
         </div>
-        
-        <section class="anime-row">
-            <h2>Animes Populares</h2>
-            <div class="anime-container">
-                <div class="anime-item">
-                    <a href="one-piece.html">
-                        <img src="images/one-piece.jpg" alt="Anime 1">
-                    </a>
-                    <h3>One Piece</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="kaiju-no-8.html">
-                       <img src="images/kaiju-no-8.jpg" alt="Anime 4">
-                    </a>  
-                    <h3>Kaiju No 8</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="sousou-no-frieren.html">
-                        <img src="images/sousou-no-frieren.jpg" alt="Anime 1">
-                    </a>
-                    <h3>Sousou No Frieren</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="solo-leveling.html">
-                       <img src="images/solo-leveling.jpg" alt="Anime 4">
-                    </a>  
-                    <h3>Solo Leveling</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="el-nino-y-la-garza.html">
-                        <img src="images/el-nino-y-la-garza.jpg" alt="Anime 1">
-                    </a>
-                    <h3>The Boys and The Heron [Movie]</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="meta-crunchyroll.html">
-                        <img src="images/crunchyroll-fans.jpg" alt="Crunchyroll">
-                    </a>
-                    <h3>Crunchyroll</h3>
-                    <p>Sub | Dob</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="anime-row">
-            <h2>Animes Populares</h2>
-            <div class="anime-container">
-                <div class="anime-item">
-                    <a href="boku-no-hero-7.html">
-                        <img src="images-estrenos-2024/boku-no-hero-7.jpg" alt="Anime 1">
-                    </a>
-                    <h3>Boku No Hero Academia S7</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="kimetsu-no-yaiba-4.html">
-                       <img src="images-estrenos-2024/demon-slayer.jpg" alt="Anime 4">
-                    </a>  
-                    <h3>Kimetsu No Yaiba Hashira Geiko-hen</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="jujutsu-kaisen-2.html">
-                        <img src="images-estrenos-2024/jujutsu-kaisen2.jpg" alt="Anime 1">
-                    </a>
-                    <h3>Jujutsu Kaisen Arco Shibuya S2</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="oshi-no-ko2.html">
-                       <img src="images-estrenos-2024/oshi-no-ko2.jpg" alt="Anime 4">
-                    </a>  
-                    <h3>Oshi No Ko S2</h3>
-                    <p>Sub | Dob</p>
-                </div>
-                <div class="anime-item">
-                    <a href="konosuba3.html">
-                        <img src="images-estrenos-2024/konosuba.jpg" alt="Anime 1">
-                    </a>
-                    <h3>Konosuba S3</h3>
-                    <p>Sub | Dob</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 AnimeWorld. Todos los derechos reservados.</p>
-    </footer>
+    </section>
+
+    <script src="scripts/carrusel.js"></script>
 </body>
 </html>
