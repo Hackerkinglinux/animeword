@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Sama</title>
+    <link rel="stylesheet" href="styles/Boton-menu-styles.css">
+    <link rel="stylesheet" href="mix genero-styles.css">
+    <link rel="stylesheet" href="styles/lupa-buscador-styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/search.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar"> 
+            <div class="left">
+                <div class="dropdown">
+                    <button class="dropbtn">Explorar</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-column">
+                            <a href="accion.html">Acción</a>
+                            <a href="aventura.html">Aventura</a>
+                            <a href="comedia.html">Comedia</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <a href="drama.html">Drama</a>
+                            <a href="fantasia.html">Fantasía</a>
+                            <a href="musical.html">Musical</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <a href="romance.html">Romance</a>
+                            <a href="ciencia-ficcion.html">Ciencia Ficción</a>
+                            <a href="seinen.html">Seinen</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <a href="shojo.html">Shojo</a>
+                            <a href="shonen.html">Shonen</a>
+                            <a href="thriller.html">Thriller</a>
+                        </div>
+                        <div class="dropdown-column">
+                            <a href="peliculas.html">Películas</a>
+                            <a href="ovas.html">OVAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <h1>Anime Sama</h1>
+            </div>
+            <div class="right">
+                <nav>
+                    <a href="index.html">Anime Sama</a>
+                    <button id="searchIcon"><img src="images/lupa.jpg" alt="Buscar" style="width: 50px; cursor: pointer;"></button>
+                </nav>
+            </div>
+            <div class="dark-mode-toggle">
+                <button id="toggleDarkMode">Dark Mode</button>
+            </div>
+        </div>
+    </header> 
+
+    <div class="advanced-search" id="searchContainer">
+        <h2>Buscar Anime</h2>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Nombre del Anime">
+            <select id="genreSelect">
+                <option value="">Todos los géneros</option>
+                <option value="accion">Acción</option>
+                <option value="aventura">Aventura</option>
+                <option value="fantasia">Fantasía</option>
+            </select>
+            <select id="statusSelect">
+                <option value="">Todos los estados</option>
+                <option value="emision">En emisión</option>
+                <option value="finalizado">Finalizado</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    <div id="searchResults"></div>
+    </div>
+</div>
+
+<section class="anime-row">
+    <h2>Popular</h2>
+    <div class="anime-container">
+        <div class="anime-item">
+            <a href="one-piece.html">
+                <img src="images/one-piece.jpg" alt="One Piece">
+            </a>
+            <h3>One Piece</h3>
+            <p>Sub | Dob</p>
+        </div>
+        <div class="anime-item">
+            <a href="sousou-no-frieren.html">
+                <img src="images/sousou-no-frieren.jpg" alt="Sousou No Frieren">
+            </a>
+            <h3>Sousou No Frieren</h3>
+            <p>Sub | Dob</p>
+        </div>
+        <div class="anime-item">
+            <a href="kaiju-no-8.html">
+               <img src="images/kaiju-no-8.jpg" alt="Kaiju No 8">
+            </a>  
+            <h3>Kaiju No 8</h3>
+            <p>Sub | Dob</p>
+        </div>
+        <div class="anime-item">
+            <a href="el-nino-y-la-garza.html">
+                <img src="images/el-nino-y-la-garza.jpg" alt="The Boys and The Heron">
+            </a>
+            <h3>The Boys and The Heron [Movie]</h3>
+            <p>Sub | Dob</p>
+        </div>
+        <div class="anime-item">
+            <a href="Oshi no ko S2.html">
+               <img src="images/oshi-no-ko2.jpg" alt="Oshi No Ko">
+            </a>  
+            <h3>Oshi No Ko</h3>
+            <p>Sub | Dob</p>
+        </div>
+        <div class="anime-item">
+            <a href="demon-slyaer.html">
+                <img src="images/demon-slayer.jpg" alt="Kimetsu no Yaiba Hashira Geiko-hen">
+            </a>
+            <h3>Kimetsu no Yaiba Hashira Geiko-hen</h3>
+            <p>Sub | Dob</p>
+        </div>
+      </div>
+  </main>
+ <footer>
+       <div class="footer-content">
+        <p>&copy; 2024 AnimeWorld. Todos los derechos reservados.</p>
+        <nav>
+            <a href="privacidad.html">Política de Privacidad</a>
+            <a href="terminos.html">Términos de Servicio</a>
+        </nav>
+      </div>
+</footer>
+</body>
+ </html>
+
+
+        
