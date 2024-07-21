@@ -1,31 +1,24 @@
-let slideIndex = 0;
-const slides = document.querySelectorAll('.carousel-item');
-const indicators = document.querySelectorAll('.carousel-indicators button');
+// carrusel.js
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(-${index * 100}%)`;
-        indicators[i].classList.toggle('active', i === index);
-    });
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.carousel-item');
+    let currentItem = 0;
+    const intervalTime = 60000; // 1 minuto en milisegundos
 
-function nextSlide() {
-    slideIndex = (slideIndex + 1) % slides.length;
-    showSlide(slideIndex);
-}
+    function showItem(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+    }
 
-function prevSlide() {
-    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-    showSlide(slideIndex);
-}
+    function nextItem() {
+        currentItem = (currentItem + 1) % items.length;
+        showItem(currentItem);
+    }
 
-document.getElementById('nextBtn').addEventListener('click', nextSlide);
-document.getElementById('prevBtn').addEventListener('click', prevSlide);
+    // Mostrar el primer item
+    showItem(currentItem);
 
-indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-        showSlide(index);
-    });
+    // Cambiar al siguiente item automáticamente cada intervalo
+    setInterval(nextItem, intervalTime);
 });
-
-setInterval(nextSlide, 5000);
