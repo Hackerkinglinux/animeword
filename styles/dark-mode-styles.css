@@ -1,18 +1,32 @@
 /* General Styles */
+:root {
+    --background-light: #ffffff;
+    --background-dark: #121212;
+    --text-light: #000000;
+    --text-dark: #e0e0e0;
+    --top-bar-light: #f0f0f0;
+    --top-bar-dark: #1f1f1f;
+    --highlight-color: #007bff;
+}
+
 body {
-    transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
-    background-color: #ffffff; /* Default background color */
-    color: #000000; /* Default text color */
+    transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
+    background-color: var(--background-light);
+    color: var(--text-light);
 }
 
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: var(--background-dark);
+    color: var(--text-dark);
 }
 
 .dark-mode .top-bar {
-    background-color: #1f1f1f; /* Darker background for the top bar */
+    background-color: var(--top-bar-dark);
+}
+
+.dark-mode .anime-item a {
+    border: 1px solid var(--highlight-color);
 }
 
 /* Night Light Styles */
@@ -21,13 +35,13 @@ body {
 }
 
 .night-light .top-bar {
-    background-color: #f0f0f0; /* Slightly brighter background for the top bar */
+    background-color: var(--top-bar-light);
 }
 
 /* Button Styles */
 .dark-mode-toggle button {
     background: none;
-    border: 2px solid #ccc;
+    border: 2px solid var(--highlight-color);
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
@@ -36,33 +50,38 @@ body {
 }
 
 .dark-mode-toggle button:hover {
-    background-color: #ddd;
-    border-color: #888;
+    background-color: var(--highlight-color);
+    border-color: #ffffff;
 }
 
-/* Icons */
-.dark-mode-toggle i {
-    font-size: 24px;
+/* Transition for Dark Mode */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    animation: fadeIn 0.5s;
 }
 
 /* Default Dark Mode if the system prefers it */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: #121212;
-        color: #e0e0e0;
+        background-color: var(--background-dark);
+        color: var(--text-dark);
     }
     .top-bar {
-        background-color: #1f1f1f;
+        background-color: var(--top-bar-dark);
     }
 }
 
 /* Default Light Mode if the system prefers it */
 @media (prefers-color-scheme: light) {
     body {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: var(--background-light);
+        color: var(--text-light);
     }
     .top-bar {
-        background-color: #f0f0f0;
+        background-color: var(--top-bar-light);
     }
 }
