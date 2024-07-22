@@ -1,21 +1,20 @@
-// scripts/dark-mode.js
-document.addEventListener('DOMContentLoaded', function() {
-    const darkModeToggle = document.getElementById('toggleDarkMode');
-    const darkModeClass = 'dark-mode';
+$(document).ready(function () {
+    const darkModeToggle = $('#darkModeToggle');
 
-    // Verifica si el modo oscuro está guardado en localStorage
-    if (localStorage.getItem('dark-mode') === 'enabled') {
-        document.body.classList.add(darkModeClass);
+    // Comprobar estado del modo oscuro al cargar la página
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        $('body').addClass('dark-mode');
     }
 
-    darkModeToggle.addEventListener('click', function() {
-        document.body.classList.toggle(darkModeClass);
-        
-        // Guarda el estado en localStorage
-        if (document.body.classList.contains(darkModeClass)) {
-            localStorage.setItem('dark-mode', 'enabled');
+    // Alternar modo oscuro al hacer clic en el botón
+    darkModeToggle.on('click', function () {
+        $('body').toggleClass('dark-mode');
+
+        // Guardar la preferencia en el almacenamiento local
+        if ($('body').hasClass('dark-mode')) {
+            localStorage.setItem('darkMode', 'enabled');
         } else {
-            localStorage.setItem('dark-mode', 'disabled');
+            localStorage.setItem('darkMode', 'disabled');
         }
     });
 });
