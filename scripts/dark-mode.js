@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const nightLightToggle = document.getElementById('nightLightToggle');
 
-    // Cargar preferencias del almacenamiento local
+    // Check saved preferences
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark-mode');
     }
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('night-light');
     }
 
-    // Alternar modo oscuro
+    // Dark Mode Toggle
     darkModeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         if (document.body.classList.contains('dark-mode')) {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Alternar luz nocturna
+    // Night Light Toggle
     nightLightToggle.addEventListener('click', () => {
         document.body.classList.toggle('night-light');
         if (document.body.classList.contains('night-light')) {
@@ -30,4 +30,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
