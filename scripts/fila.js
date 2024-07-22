@@ -1,5 +1,3 @@
-// fila.js
-
 document.querySelectorAll('.fila-contenedor').forEach(contenedor => {
     const items = contenedor.querySelector('.fila-items');
     const flechaIzquierda = contenedor.querySelector('.flecha-izquierda');

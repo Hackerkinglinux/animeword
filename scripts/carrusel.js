@@ -1,24 +1,20 @@
-// carrusel.js
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const items = document.querySelectorAll('.carousel-item');
     let currentItem = 0;
-    const intervalTime = 60000; // 1 minuto en milisegundos
 
     function showItem(index) {
-        items.forEach((item, i) => {
-            item.classList.toggle('active', i === index);
-        });
+        items[currentItem].classList.remove('active');
+        currentItem = index;
+        if (currentItem >= items.length) {
+            currentItem = 0;
+        }
+        if (currentItem < 0) {
+            currentItem = items.length - 1;
+        }
+        items[currentItem].classList.add('active');
     }
 
-    function nextItem() {
-        currentItem = (currentItem + 1) % items.length;
-        showItem(currentItem);
-    }
-
-    // Mostrar el primer item
-    showItem(currentItem);
-
-    // Cambiar al siguiente item automáticamente cada intervalo
-    setInterval(nextItem, intervalTime);
+    setInterval(() => {
+        showItem(currentItem + 1);
+    }, 5000);
 });
