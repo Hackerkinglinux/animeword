@@ -27,8 +27,9 @@ body {
 }
 
 .fila-items img {
-    width: 120px; /* Ajuste del ancho del icono */
-    height: 180px; /* Ajuste de la altura del icono */
+    width: 200px; /* Ajuste del ancho del icono */
+    height: auto; /* Ajuste de la altura del icono */
+    border-radius: 10px;
     object-fit: cover;
     margin-right: 10px;
     transition: transform 0.3s;
