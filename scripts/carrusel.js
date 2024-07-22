@@ -3,15 +3,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.carousel-item');
     let currentItem = 0;
-    const intervalTime = 60000; // 1 minuto
-    const totalItems = items.length;
+    const intervalTime = 60000; // 1 minuto en milisegundos
 
-    function showNextItem() {
-        items[currentItem].classList.remove('active');
-        currentItem = (currentItem + 1) % totalItems;
-        items[currentItem].classList.add('active');
+    function showItem(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
     }
 
-    setInterval(showNextItem, intervalTime);
-    items[currentItem].classList.add('active');
+    function nextItem() {
+        currentItem = (currentItem + 1) % items.length;
+        showItem(currentItem);
+    }
+
+    // Mostrar el primer item
+    showItem(currentItem);
+
+    // Cambiar al siguiente item automáticamente cada intervalo
+    setInterval(nextItem, intervalTime);
 });
