@@ -2,13 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
     padding: 10px 20px;
+    background-color: #333;
     color: white;
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 24px;
+    font-weight: bold;
     color: white;
     text-decoration: none;
 }
@@ -17,38 +18,44 @@ nav {
     position: relative;
 }
 
-.dropbtn {
-    background: none;
-    border: none;
+nav a {
     color: white;
-    font-size: 1em;
-    cursor: pointer;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #444;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background: #444;
-    padding: 10px;
+    background-color: #444;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+}
+
+nav:hover .dropdown-content {
+    display: flex;
 }
 
 .dropdown-column {
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 .dropdown-column a {
     color: white;
-    padding: 8px 16px;
+    padding: 8px 10px;
     text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
 }
 
 .dropdown-column a:hover {
-    background: #555;
-}
-
-nav:hover .dropdown-content {
-    display: flex;
+    background-color: #555;
 }
