@@ -1,40 +1,25 @@
-/* Estilos generales para el modo oscuro */
+/* Estilos generales */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo oscuro */
 body.dark-mode {
     background-color: #121212; /* Fondo oscuro */
     color: #e0e0e0; /* Texto claro */
 }
 
-/* Efecto de modo nocturno en el fondo */
-body.dark-mode::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Capa oscura con opacidad */
-    z-index: -1;
-    transition: background 0.3s ease;
-}
-
-/* Ajustes para los elementos en modo oscuro */
-body.dark-mode header,
-body.dark-mode footer {
-    background-color: #1e1e1e; /* Fondo oscuro para cabecera y pie de página */
-}
-
-body.dark-mode .button {
-    background-color: #333; /* Fondo de botones */
-    color: #fff; /* Texto de botones */
-}
-
-/* Enlaces y formularios */
 body.dark-mode a {
-    color: #bb86fc; /* Color de enlaces */
+    color: #bb86fc; /* Color de enlaces en modo oscuro */
 }
 
-body.dark-mode input,
-body.dark-mode textarea {
-    background-color: #333; /* Fondo oscuro para campos de entrada */
-    color: #fff; /* Texto en campos de entrada */
+/* Efecto de luz nocturna */
+body.night-light {
+    filter: sepia(100%) hue-rotate(-20deg); /* Ajuste de color cálido */
+    transition: filter 0.3s ease;
+}
+
+/* Modo oscuro con luz nocturna */
+body.dark-mode.night-light {
+    filter: sepia(100%) hue-rotate(-20deg); /* Ajuste de color cálido en modo oscuro */
 }
