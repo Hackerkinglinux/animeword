@@ -14,28 +14,33 @@
             <div class="left">
                 <a href="#" class="logo">Anime Sama</a>
                 <nav>
-                    <div class="dropdown">
-                        <button class="dropbtn">Explorar</button>
-                        <div class="dropdown-content">
+                    <a href="#" class="dropbtn">Explorar</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-column">
                             <a href="accion.html">Acción</a>
                             <a href="aventura.html">Aventura</a>
                             <a href="comedia.html">Comedia</a>
+                        </div>
+                        <div class="dropdown-column">
                             <a href="drama.html">Drama</a>
                             <a href="fantasia.html">Fantasía</a>
                             <a href="musical.html">Musical</a>
+                        </div>
+                        <div class="dropdown-column">
                             <a href="romance.html">Romance</a>
                             <a href="ciencia-ficcion.html">Ciencia Ficción</a>
                             <a href="seinen.html">Seinen</a>
+                        </div>
+                        <div class="dropdown-column">
                             <a href="shojo.html">Shojo</a>
                             <a href="shonen.html">Shonen</a>
                             <a href="thriller.html">Thriller</a>
+                        </div>
+                        <div class="dropdown-column">
                             <a href="peliculas.html">Películas</a>
                             <a href="ovas.html">OVAs</a>
                         </div>
                     </div>
-                    <a href="#">Juegos</a>
-                    <a href="#">Tienda</a>
-                    <a href="#">Noticias</a>
                 </nav>
             </div>
             <div class="right">
@@ -83,34 +88,114 @@
     <section class="fila">
         <h2>Animes Populares</h2>
         <div class="fila-contenedor">
-            <button class="flecha-izquierda">&#10094;</button>
-            <div class="fila-items">
-                <img src="imagenes-popular/solo-leveling.jpg" alt="Solo Leveling">
-                <img src="imagenes-popular/one-piece.jpg" alt="One Piece">
-                <img src="imagenes-popular/sousou-no-frieren.jpg" alt="Sousou no Frieren">
-                <img src="imagenes-popular/demon-slayer.jpg" alt="Demon Slayer">
-                <!-- Agrega más imágenes según sea necesario -->
+            <button class="flecha-izquierda" onclick="moverFila('populares', -1)">&#10094;</button>
+            <div class="fila-items" id="populares">
+                <div class="anime-item">
+                    <a href="sousou-no-frieren.html">
+                        <img src="imagenes-populares/sousou-no-frieren.jpg" alt="Anime 1">
+                    </a>
+                    <h3>Sousou No Frieren</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="one-piece.html">
+                        <img src="imagenes-populares/one-piece.jpg" alt="Anime 2">
+                    </a>
+                    <h3>One Piece</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="kaiju-no-8.html">
+                        <img src="imagenes-populares/kaiju-no-8.jpg" alt="Anime 3">
+                    </a>
+                    <h3>Kaiju No 8</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="el-nino-y-la-garza.html">
+                        <img src="imagenes-populares/el-nino-y-la-garza.jpg" alt="Anime 4">
+                    </a>
+                    <h3>El Niño y la Garza</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="oshi-no-ko.html">
+                        <img src="imagenes-populares/oshi-no-ko2.jpg" alt="Anime 5">
+                    </a>
+                    <h3>Oshi No Ko</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="demon-slayer.html">
+                        <img src="imagenes-populares/demon-slayer.jpg" alt="Anime 6">
+                    </a>
+                    <h3>Demon Slayer</h3>
+                    <p>Sub | Dob</p>
+                </div>
             </div>
-            <button class="flecha-derecha">&#10095;</button>
+            <button class="flecha-derecha" onclick="moverFila('populares', 1)">&#10095;</button>
         </div>
     </section>
 
     <section class="fila">
         <h2>Estrenos de 2024</h2>
         <div class="fila-contenedor">
-            <button class="flecha-izquierda">&#10094;</button>
-            <div class="fila-items">
-                <img src="imagenes-popular/kaiju-no-8.jpg" alt="Kaiju no 8">
-                <img src="imagenes-popular/el-nino-y-la-garza.jpg" alt="The Boys and the heron">
-                <img src="imagenes-popular/konosuba.jpg" alt="Konosuba S3">
-                <img src="imagenes-popular/oshi-no-ko2.jpg" alt="Oshi no Ko S2">
-                <!-- Agrega más imágenes según sea necesario -->
+            <button class="flecha-izquierda" onclick="moverFila('estrenos', -1)">&#10094;</button>
+            <div class="fila-items" id="estrenos">
+                <div class="anime-item">
+                    <a href="anime1.html">
+                        <img src="images-estrenos-2024/Konosuba.jpg" alt="Anime 1">
+                    </a>
+                    <h3>Konosuba</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="oshi-no-ko.html">
+                        <img src="images-estrenos-2024/oshi-no-ko2.jpg" alt="Anime 2">
+                    </a>
+                    <h3>Oshi no ko S2</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="kaiju-no-8.html">
+                        <img src="images-estrenos-2024/kaiju-no-8.jpg" alt="Anime 3">
+                    </a>
+                    <h3>Kaiju No 8</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="el-nino-y-la-garza.html">
+                        <img src="images-estrenos-2024/el-nino-y-la-garza.jpg" alt="Anime 4">
+                    </a>
+                    <h3>El Niño y la Garza</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="boku-no-hero-academia.html">
+                        <img src="images-estrenos-2024/boku-no-hero-7.jpg" alt="Anime 5">
+                    </a>
+                    <h3>Boku no Hero Academia S7</h3>
+                    <p>Sub | Dob</p>
+                </div>
+                <div class="anime-item">
+                    <a href="jujutsu-kaisen-2.html">
+                        <img src="images-estrenos-2024/jujutsu-kaisen2.jpg" alt="Anime 6">
+                    </a>
+                    <h3>Jujutsu Kaisen Arc Shibuya S2</h3>
+                    <p>Sub | Dob</p>
+                </div>
             </div>
-            <button class="flecha-derecha">&#10095;</button>
+            <button class="flecha-derecha" onclick="moverFila('estrenos', 1)">&#10095;</button>
         </div>
     </section>
 
     <script src="scripts/carrusel.js"></script>
-    <script src="scripts/fila.js"></script>
+    <script>
+        function moverFila(id, dir) {
+            const fila = document.getElementById(id);
+            const scrollAmount = dir * fila.clientWidth;
+            fila.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
 </body>
 </html>
