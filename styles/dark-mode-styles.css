@@ -11,9 +11,17 @@ body {
     color: #e0e0e0;
 }
 
+.dark-mode .top-bar {
+    background-color: #1f1f1f; /* Darker background for the top bar */
+}
+
 /* Night Light Styles */
 .night-light {
     filter: brightness(0.9) contrast(1.1);
+}
+
+.night-light .top-bar {
+    background-color: #f0f0f0; /* Slightly brighter background for the top bar */
 }
 
 /* Button Styles */
@@ -43,6 +51,9 @@ body {
         background-color: #121212;
         color: #e0e0e0;
     }
+    .top-bar {
+        background-color: #1f1f1f;
+    }
 }
 
 /* Default Light Mode if the system prefers it */
@@ -50,5 +61,8 @@ body {
     body {
         background-color: #ffffff;
         color: #000000;
+    }
+    .top-bar {
+        background-color: #f0f0f0;
     }
 }
