@@ -1,0 +1,72 @@
+/* anime-details-styles.css */
+.anime-details {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.anime-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.anime-info img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.anime-details-text {
+    max-width: 600px;
+}
+
+.anime-info h1 {
+    margin: 0;
+}
+
+.anime-info p {
+    margin: 5px 0;
+}
+
+.anime-buttons {
+    margin-top: 20px;
+}
+
+button#watchNow,
+.download-button {
+    background-color: #444;
+    color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+button#watchNow:hover,
+.download-button:hover {
+    background-color: #555;
+}
+
+/* Efectos futuristas */
+.anime-info {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.anime-info:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.download-button {
+    background-color: #666;
+    color: #e0e0e0;
+}
+
+.download-button:hover {
+    background-color: #777;
+}
