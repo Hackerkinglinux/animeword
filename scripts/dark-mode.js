@@ -1,12 +1,17 @@
+// dark-mode.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const nightLightToggle = document.getElementById('nightLightToggle');
 
-    // Check saved preferences
-    if (localStorage.getItem('darkMode') === 'enabled') {
+    // Load saved preferences
+    const darkMode = localStorage.getItem('darkMode') === 'enabled';
+    const nightLight = localStorage.getItem('nightLight') === 'enabled';
+
+    if (darkMode) {
         document.body.classList.add('dark-mode');
     }
-    if (localStorage.getItem('nightLight') === 'enabled') {
+    if (nightLight) {
         document.body.classList.add('night-light');
     }
 
