@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
 }
 
 /* Modo oscuro */
@@ -9,17 +9,50 @@ body.dark-mode {
     color: #e0e0e0; /* Texto claro */
 }
 
-body.dark-mode a {
-    color: #bb86fc; /* Color de enlaces en modo oscuro */
-}
-
-/* Efecto de luz nocturna */
+/* Luz nocturna */
 body.night-light {
-    filter: sepia(100%) hue-rotate(-20deg); /* Ajuste de color cálido */
-    transition: filter 0.3s ease;
+    filter: sepia(100%) hue-rotate(-20deg); /* Ajusta el color cálido */
 }
 
 /* Modo oscuro con luz nocturna */
 body.dark-mode.night-light {
-    filter: sepia(100%) hue-rotate(-20deg); /* Ajuste de color cálido en modo oscuro */
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0; /* Texto claro */
+}
+
+/* Opcional: Ajustes específicos para el modo oscuro y la luz nocturna */
+body.dark-mode.night-light .anime-section {
+    background-color: #1e1e1e; /* Fondo de secciones de anime en modo oscuro con luz nocturna */
+    color: #e0e0e0; /* Texto claro en secciones de anime */
+}
+
+/* Estilo del botón de alternancia */
+.dark-mode-toggle button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dark-mode-toggle button:hover {
+    background-color: #555;
+}
+
+/* Ajustes para modo oscuro basado en la preferencia del sistema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212; /* Fondo oscuro para modo oscuro */
+        color: #e0e0e0; /* Texto claro para modo oscuro */
+    }
+}
+
+/* Ajustes para modo claro basado en la preferencia del sistema */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #ffffff; /* Fondo claro para modo claro */
+        color: #000000; /* Texto oscuro para modo claro */
+    }
 }
