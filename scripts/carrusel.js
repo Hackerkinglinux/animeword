@@ -1,20 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
+// carrusel.js
+
+document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.carousel-item');
     let currentItem = 0;
+    const intervalTime = 60000; // 1 minuto
+    const totalItems = items.length;
 
-    function showItem(index) {
+    function showNextItem() {
         items[currentItem].classList.remove('active');
-        currentItem = index;
-        if (currentItem >= items.length) {
-            currentItem = 0;
-        }
-        if (currentItem < 0) {
-            currentItem = items.length - 1;
-        }
+        currentItem = (currentItem + 1) % totalItems;
         items[currentItem].classList.add('active');
     }
 
-    setInterval(() => {
-        showItem(currentItem + 1);
-    }, 5000);
+    setInterval(showNextItem, intervalTime);
+    items[currentItem].classList.add('active');
 });
