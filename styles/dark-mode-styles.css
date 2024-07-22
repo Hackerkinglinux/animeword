@@ -1,10 +1,10 @@
 /* Estilos generales para el modo oscuro */
 body.dark-mode {
-    background-color: #121212; /* Fondo negro para el modo oscuro */
+    background-color: #121212; /* Fondo oscuro */
     color: #e0e0e0; /* Texto claro */
 }
 
-/* Efecto de modo nocturno en fondo */
+/* Efecto de modo nocturno en el fondo */
 body.dark-mode::before {
     content: '';
     position: fixed;
@@ -12,29 +12,29 @@ body.dark-mode::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Negro con opacidad */
+    background: rgba(0, 0, 0, 0.8); /* Capa oscura con opacidad */
     z-index: -1;
     transition: background 0.3s ease;
 }
 
-/* Asegúrate de que los elementos sean visibles en modo oscuro */
+/* Ajustes para los elementos en modo oscuro */
 body.dark-mode header,
 body.dark-mode footer {
-    background-color: #1e1e1e;
+    background-color: #1e1e1e; /* Fondo oscuro para cabecera y pie de página */
 }
 
 body.dark-mode .button {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Fondo de botones */
+    color: #fff; /* Texto de botones */
 }
 
-/* Estilos para otros elementos como enlaces, formularios, etc. */
+/* Enlaces y formularios */
 body.dark-mode a {
-    color: #bb86fc; /* Color de enlaces en modo oscuro */
+    color: #bb86fc; /* Color de enlaces */
 }
 
 body.dark-mode input,
 body.dark-mode textarea {
-    background-color: #333;
-    color: #fff;
+    background-color: #333; /* Fondo oscuro para campos de entrada */
+    color: #fff; /* Texto en campos de entrada */
 }
