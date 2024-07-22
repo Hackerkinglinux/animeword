@@ -88,7 +88,7 @@
     <section class="fila">
         <h2>Animes Populares</h2>
         <div class="fila-contenedor">
-            <button class="flecha-izquierda" onclick="moverFila('populares', -1)">&#10094;</button>
+            <button class="flecha-izquierda">&#10094;</button>
             <div class="fila-items" id="populares">
                 <div class="anime-item">
                     <a href="sousou-no-frieren.html">
@@ -133,14 +133,14 @@
                     <p>Sub | Dob</p>
                 </div>
             </div>
-            <button class="flecha-derecha" onclick="moverFila('populares', 1)">&#10095;</button>
+            <button class="flecha-derecha">&#10095;</button>
         </div>
     </section>
 
     <section class="fila">
         <h2>Estrenos de 2024</h2>
         <div class="fila-contenedor">
-            <button class="flecha-izquierda" onclick="moverFila('estrenos', -1)">&#10094;</button>
+            <button class="flecha-izquierda">&#10094;</button>
             <div class="fila-items" id="estrenos">
                 <div class="anime-item">
                     <a href="anime1.html">
@@ -171,33 +171,25 @@
                     <p>Sub | Dob</p>
                 </div>
                 <div class="anime-item">
-                    <a href="boku-no-hero-academia.html">
-                        <img src="images-estrenos-2024/boku-no-hero-7.jpg" alt="Anime 5">
+                    <a href="jujutsu-kaisen.html">
+                        <img src="images-estrenos-2024/jujutsu-kaisen2.jpg" alt="Anime 5">
                     </a>
-                    <h3>Boku no Hero Academia S7</h3>
+                    <h3>Jujutsu Kaisen S2</h3>
                     <p>Sub | Dob</p>
                 </div>
                 <div class="anime-item">
-                    <a href="jujutsu-kaisen-2.html">
-                        <img src="images-estrenos-2024/jujutsu-kaisen2.jpg" alt="Anime 6">
+                    <a href="re-zero.html">
+                        <img src="images-estrenos-2024/re-zero.jpg" alt="Anime 6">
                     </a>
-                    <h3>Jujutsu Kaisen Arc Shibuya S2</h3>
+                    <h3>Re:Zero S3</h3>
                     <p>Sub | Dob</p>
                 </div>
             </div>
-            <button class="flecha-derecha" onclick="moverFila('estrenos', 1)">&#10095;</button>
+            <button class="flecha-derecha">&#10095;</button>
         </div>
     </section>
-
-    <script src="scripts/carrusel.js"></script>
-    <script>
-        function moverFila(id, dir) {
-            const fila = document.getElementById(id);
-            const scrollAmount = dir * fila.clientWidth;
-            fila.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        }
-    </script>
+    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/fila.js"></script>
 </body>
 </html>
-
 
