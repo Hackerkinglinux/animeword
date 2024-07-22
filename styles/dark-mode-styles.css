@@ -1,44 +1,117 @@
 /* dark-mode-styles.css */
 body {
-    background-color: #1e1e1e; /* Fondo oscuro */
+    background-color: #1e1e1e; /* Fondo oscuro general */
     color: #e0e0e0; /* Texto claro */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 header, footer {
-    background-color: #2c2c2c; /* Fondo de cabecera y pie de página oscuro */
+    background-color: #2c2c2c; /* Fondo oscuro para header y footer */
+    color: #e0e0e0;
+    padding: 10px;
+}
+
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .navbar, .dropdown-content {
     background-color: #333; /* Fondo del menú desplegable */
-    color: #e0e0e0; /* Texto del menú desplegable claro */
+    color: #e0e0e0;
 }
 
 button, .dropbtn, #toggleDarkMode {
     background-color: #444; /* Fondo de botones */
-    color: #e0e0e0; /* Texto de botones claro */
+    color: #e0e0e0; /* Texto de botones */
     border: none;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 button:hover, .dropbtn:hover, #toggleDarkMode:hover {
     background-color: #555; /* Fondo de botones en hover */
 }
 
+.anime-section {
+    background-color: #2c2c2c; /* Fondo de secciones de anime */
+    border: 1px solid #444; /* Borde de las secciones */
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.anime-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
 .anime-item {
-    background-color: #2c2c2c; /* Fondo de cada item de anime */
+    background-color: #333; /* Fondo de cada item de anime */
     border: 1px solid #444; /* Borde de los items */
     border-radius: 5px;
+    padding: 10px;
+    width: calc(33.333% - 20px); /* Tres columnas de ancho */
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .anime-item img {
+    width: 100%;
     border-radius: 5px;
+    transition: transform 0.3s;
 }
 
-.advanced-search, .anime-section {
-    background-color: #333; /* Fondo de búsqueda avanzada y secciones de anime */
-    border: 1px solid #444; /* Borde de las secciones */
+.anime-item img:hover {
+    transform: scale(1.05); /* Efecto de zoom en hover */
+}
+
+.advanced-search {
+    background-color: #333; /* Fondo de búsqueda avanzada */
+    border: 1px solid #444; /* Borde de búsqueda avanzada */
     border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.advanced-search input, .advanced-search select, .advanced-search button {
+    background-color: #444;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.advanced-search input:focus, .advanced-search select:focus, .advanced-search button:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.dark-mode .anime-section {
+    background-color: #2c2c2c; /* Fondo oscuro en modo oscuro */
+    border: 1px solid #444;
+}
+
+.dark-mode .anime-item {
+    background-color: #333; /* Fondo oscuro para items en modo oscuro */
+}
+
+.dark-mode button, .dark-mode .dropbtn, .dark-mode #toggleDarkMode {
+    background-color: #444; /* Fondo oscuro para botones en modo oscuro */
+}
+
+.dark-mode button:hover, .dark-mode .dropbtn:hover, .dark-mode #toggleDarkMode:hover {
+    background-color: #555;
 }
 
 /* Efectos y otros estilos futuristas */
