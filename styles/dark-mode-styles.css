@@ -1,32 +1,12 @@
 /* General Styles */
-:root {
-    --background-light: #ffffff;
-    --background-dark: #121212;
-    --text-light: #000000;
-    --text-dark: #e0e0e0;
-    --top-bar-light: #f0f0f0;
-    --top-bar-dark: #1f1f1f;
-    --highlight-color: #007bff;
-}
-
 body {
-    transition: background-color 0.5s ease, color 0.5s ease, filter 0.5s ease;
-    background-color: var(--background-light);
-    color: var(--text-light);
+    transition: background-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
 }
 
 /* Dark Mode Styles */
 .dark-mode {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-}
-
-.dark-mode .top-bar {
-    background-color: var(--top-bar-dark);
-}
-
-.dark-mode .anime-item a {
-    border: 1px solid var(--highlight-color);
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 /* Night Light Styles */
@@ -34,14 +14,10 @@ body {
     filter: brightness(0.9) contrast(1.1);
 }
 
-.night-light .top-bar {
-    background-color: var(--top-bar-light);
-}
-
 /* Button Styles */
 .dark-mode-toggle button {
     background: none;
-    border: 2px solid var(--highlight-color);
+    border: 2px solid #ccc;
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
@@ -50,38 +26,27 @@ body {
 }
 
 .dark-mode-toggle button:hover {
-    background-color: var(--highlight-color);
-    border-color: #ffffff;
+    background-color: #ddd;
+    border-color: #888;
 }
 
-/* Transition for Dark Mode */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Icons */
+.dark-mode-toggle i {
+    font-size: 24px;
 }
 
-body {
-    animation: fadeIn 0.5s;
-}
-
-/* Default Dark Mode if the system prefers it */
+/* Modo oscuro por defecto si el sistema lo prefiere */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: var(--background-dark);
-        color: var(--text-dark);
-    }
-    .top-bar {
-        background-color: var(--top-bar-dark);
+        background-color: #121212;
+        color: #e0e0e0;
     }
 }
 
-/* Default Light Mode if the system prefers it */
+/* Modo claro por defecto si el sistema lo prefiere */
 @media (prefers-color-scheme: light) {
     body {
-        background-color: var(--background-light);
-        color: var(--text-light);
-    }
-    .top-bar {
-        background-color: var(--top-bar-light);
+        background-color: #ffffff;
+        color: #000000;
     }
 }
