@@ -58,6 +58,18 @@ header nav a {
     margin-bottom: 40px;
 }
 
+.genre-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.genre-header img {
+    height: 50px;
+    width: auto;
+}
+
 .anime-row {
     position: relative;
 }
