@@ -1,0 +1,62 @@
+/* styles.css */
+
+.anime-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.anime-item {
+    position: relative;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.anime-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.anime-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.anime-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.anime-item:hover .anime-image {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(80%);
+}
+
+.anime-item:hover .anime-info {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Efecto de parpadeo en el título */
+.anime-info h3 {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
