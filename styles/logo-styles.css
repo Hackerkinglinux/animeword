@@ -1,0 +1,83 @@
+/* logo-styles.css */
+
+.top-bar .logo {
+    display: inline-block;
+    background-image: url('images-logos/animesama-logo-trasnparentepng'); /* Ajusta la ruta si es necesario */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px; /* Ajusta el tamaño según tu preferencia */
+    height: 50px; /* Ajusta el tamaño según tu preferencia */
+    margin: 10px 20px; /* Ajusta el margen según tu preferencia */
+    text-indent: -9999px; /* Oculta el texto */
+}
+
+.top-bar .left {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Ajusta el color según tu preferencia */
+    padding: 10px 20px; /* Ajusta el padding según tu preferencia */
+}
+
+.top-bar nav {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown .dropbtn {
+    background-color: #333; /* Ajusta el color según tu preferencia */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+#searchIcon {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px; /* Ajusta el margen según tu preferencia */
+}
+
+#searchIcon img {
+    width: 20px; /* Ajusta el tamaño según tu preferencia */
+}
+
+.right img {
+    width: 30px; /* Ajusta el tamaño según tu preferencia */
+    border-radius: 50%;
+}
